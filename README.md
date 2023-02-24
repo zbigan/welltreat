@@ -23,7 +23,7 @@
 _At this iteration focus is only on main appointment registration use case. Login, user profile, appointment editing, map and other functionalities will be left to next iterations._
 
 ### **Infrastructure:**
-  - [ ] CI and CD pipeline (with hosting setup)               (1d)
+  - [x] CI and CD pipeline (with hosting setup)               (estimated: 1d, actual: 1d) :clap:
   - [ ] NodeJs backend (with SQL db)                          (2d)
 
 ### **App navigation infrastructure:**

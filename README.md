@@ -24,7 +24,8 @@ _At this iteration focus is only on main appointment registration use case. Logi
 
 ### **Infrastructure:**
   - [x] CI and CD pipeline (with hosting setup)               (estimated: 1d, actual: 1d) :clap:
-  - [ ] NodeJs backend (with SQL db)                          (2d)
+  - [ ] NodeJs backend (with SQL db and contracts)                          (2d)
+  - [ ] API layer according to BE contracts
 
 ### **App navigation infrastructure:**
   - [ ] Navigation bar for appointment registraiton steps     (1d)

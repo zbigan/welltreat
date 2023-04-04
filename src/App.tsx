@@ -1,7 +1,4 @@
 import React from 'react'
-import { setupIonicReact } from '@ionic/react'
-
-setupIonicReact()
 
 export default function App () {
   return (

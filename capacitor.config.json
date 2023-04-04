@@ -1,0 +1,8 @@
+{
+  "appId": "io.ionic.welltreat",
+  "appName": "welltreat",
+  "bundledWebRuntime": false,
+  "npmClient": "pnpm",
+  "webDir": "dist",
+  "cordova": {}
+}

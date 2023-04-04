@@ -1,4 +1,5 @@
-# This is an approximate copy of "Treatwell" app
+# This is an approximate copy of "Treatwell"
+## Target infrastructure: cross-platform (web, mobile)
 ### Aim of this project is to train my software development skills
 
 ### App is live at https://welltreat-fe.onrender.com/
@@ -14,13 +15,18 @@
 - Apply OOP design patterns
 - Typescript
 - NodeJs
+- Ionic
+- Tailwind CSS
+- Web Components
 
 ---
 
 # Estimation
 
-## First sprint (02-23 - 03-09):
+## Sprint (02-23 - 03-09): :x:
 _At this iteration focus is only on main appointment registration use case. Login, user profile, appointment editing, map and other functionalities will be left to next iterations._
+## Sprint (04-04 - 04-18):
+_At this sprint focus is on frontend/UX part. Data from BE will be hardcoded._
 
 ### **Infrastructure:**
   - [x] CI and CD pipeline (with hosting setup)               (estimated: 1d, actual: 1d) :clap:

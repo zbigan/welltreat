@@ -12,17 +12,19 @@ import '@ionic/react/css/core.css';
 
 const isAuthored = true
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/categories" render={() => isAuthored ? <CategorySelect /> : <LoginPage />}/>
-        <Route exact path="/saloons" render={(props) => <SaloonsList {...props} />} />
-        <Route exact path="/saloonDetails" render={(props) => <SaloonDetails {...props} />} />
-        <Route exact path="/" render={() => <Redirect to="/categories" />} />
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
-);
+const App: React.FC = () => {
+  return (
+    <IonApp>
+        <IonReactRouter>
+         <IonRouterOutlet>
+           <Route exact path="/categories" render={() => isAuthored ? <CategorySelect /> : <LoginPage />}/>
+           <Route exact path="/saloons" render={(props) => <SaloonsList {...props} />} />
+           <Route exact path="/saloonDetails" render={(props) => <SaloonDetails {...props} />} />
+           <Route exact path="/" render={() => <Redirect to="/categories" />} />
+         </IonRouterOutlet>
+       </IonReactRouter>
+    </IonApp>
+  )
+}
 
 export default App

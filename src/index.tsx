@@ -19,10 +19,7 @@ import '@ionic/react/css/text-transformation.css'
 import '@ionic/react/css/flex-utils.css'
 import '@ionic/react/css/display.css'
 
-import { setupIonicReact } from '@ionic/react'
-
-setupIonicReact()
 
 const container = document.getElementById('app-root')!
 const root = createRoot(container)
-root.render(<App />)
+root.render(<React.StrictMode><App /></React.StrictMode>)

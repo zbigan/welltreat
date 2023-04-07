@@ -7,7 +7,7 @@ const SaloonDetails: React.FC<RouteComponentProps<{categoryId: string; saloonId:
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Saloon {saloonId}</IonTitle>
+          <IonTitle className="ion-text-center">Saloon {saloonId}</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent class="ion-padding">

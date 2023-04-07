@@ -8,22 +8,22 @@ const CategorySelect: React.FC<RouteComponentProps> = ({match: {url}}) => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Category Select</IonTitle>
+          <IonTitle className="text-center">Category Select</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent class="ion-padding">
-        <IonList>
+      <IonContent>
+        <IonList className="grid grid-cols-2 gap-4 p-2">
           <IonItem routerDirection="forward" routerLink={`${url}/categories/1`}>
-            <IonLabel>Category 1</IonLabel>
+            <IonLabel className="text-center">Category 1</IonLabel>
           </IonItem>
           <IonItem routerDirection="forward" routerLink={`${url}/categories/2`}>
-            <IonLabel>Category 2</IonLabel>
+            <IonLabel className="text-center">Category 2</IonLabel>
           </IonItem>
           <IonItem routerDirection="forward" routerLink={`${url}/categories/3`}>
-            <IonLabel>Category 3</IonLabel>
+            <IonLabel className="text-center">Category 3</IonLabel>
           </IonItem>
           <IonItem routerDirection="forward" routerLink={`${url}/categories/4`}>
-            <IonLabel>Category 4</IonLabel>
+            <IonLabel className="text-center">Category 4</IonLabel>
           </IonItem>
         </IonList>
       </IonContent>

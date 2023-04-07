@@ -8,10 +8,10 @@ const CategoryDetails: React.FC<RouteComponentProps<{categoryId: string}>> = ({m
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>This is category {categoryId}</IonTitle>
+          <IonTitle className="text-center">This is category {categoryId}</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent class="ion-padding">
+      <IonContent className="p-2">
         <h1>Saloons List</h1>
         <IonList>
           <IonItem routerDirection="forward" routerLink={`${url}/saloons/1`}>

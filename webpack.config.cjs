@@ -50,8 +50,8 @@ module.exports = {
     !prod && new ForkTsCheckerWebpackPlugin(),
     !prod && new ReactRefreshWebpackPlugin()
   ].filter(Boolean),
-  // devServer: {
-  //   open: true,
-  //   hot: true
-  // }
+  devServer: {
+    open: true,
+    hot: true
+  }
 };

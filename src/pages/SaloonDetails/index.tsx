@@ -1,21 +1,21 @@
 import React from "react"
-import { IonButton, IonContent, IonHeader, IonTitle, IonToolbar } from "@ionic/react"
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react"
 import { RouteComponentProps } from "react-router-dom"
 
-const SaloonsList: React.FC<RouteComponentProps> = (props) => {
+const SaloonDetails: React.FC<RouteComponentProps<{categoryId: string; saloonId: string}>> = ({match: {params: {saloonId}}}) => {
   return (
-    <>
+    <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Saloons List</IonTitle>
+          <IonTitle>Saloon {saloonId}</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent class="ion-padding">
-        <h1>Saloons List</h1>
-        <IonButton routerLink="/saloonDetails" routerDirection="forward">Go to saloon details</IonButton>
+        <h1>Saloon {saloonId}</h1>
+        Some details ahead!
       </IonContent>
-    </>
+    </IonPage>
   )
 }
 
-export default SaloonsList
+export default SaloonDetails

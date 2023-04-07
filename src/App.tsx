@@ -1,15 +1,13 @@
-import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
-import { IonApp, IonRouterOutlet } from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
-import CategorySelect from './pages/CategorySelect';
-import SaloonsList from './pages/SaloonsList';
-import LoginPage from './pages/LoginPage';
-import SaloonDetails from './pages/SaloonDetails';
+import React from 'react'
+import { Route, Redirect } from 'react-router-dom'
+import { IonApp, IonRouterOutlet } from '@ionic/react'
+import { IonReactRouter } from '@ionic/react-router'
+import LoginPage from './pages/LoginPage'
 import { setupIonicReact } from '@ionic/react'
+import ServiceFinder from './pages/ServiceFinder'
 
 /* Core CSS required for Ionic components to work properly */
-import '@ionic/react/css/core.css';
+import '@ionic/react/css/core.css'
 
 setupIonicReact()
 
@@ -20,10 +18,8 @@ const App: React.FC = () => {
     <IonApp>
       <IonReactRouter>
         <IonRouterOutlet>
-          <Route exact path="/categories" component={CategorySelect}/>
-          <Route exact path="/saloons" render={(props) => <SaloonsList {...props} />} />
-          <Route exact path="/saloonDetails" render={(props) => <SaloonDetails {...props} />} />
-          <Route exact path="/" render={() => <Redirect to="/categories" />} />
+          <Route path="/serviceFinder" component={isAuthored ? ServiceFinder : LoginPage}/>
+          <Redirect exact from="/" to="/serviceFinder" />
         </IonRouterOutlet>
       </IonReactRouter>
     </IonApp>

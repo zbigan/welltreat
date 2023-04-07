@@ -18,8 +18,15 @@ import '@ionic/react/css/text-alignment.css'
 import '@ionic/react/css/text-transformation.css'
 import '@ionic/react/css/flex-utils.css'
 import '@ionic/react/css/display.css'
+import { ErrorBoundary } from './components/ErrorBoundary'
 
 
 const container = document.getElementById('app-root')!
 const root = createRoot(container)
-root.render(<React.StrictMode><App /></React.StrictMode>)
+root.render(
+  <React.StrictMode>
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
+  </React.StrictMode>
+)

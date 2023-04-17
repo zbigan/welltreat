@@ -11,20 +11,20 @@ const CategoryDetails: React.FC<RouteComponentProps<{categoryId: string}>> = ({m
           <IonTitle className="text-center">This is category {categoryId}</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent className="p-2">
+      <IonContent>
         <h1>Saloons List</h1>
-        <IonList>
+        <IonList className="grid grid-cols-2 gap-4 p-2">
           <IonItem routerDirection="forward" routerLink={`${url}/saloons/1`}>
-            <IonLabel>Saloon 1</IonLabel>
+            <IonLabel className="text-center">Saloon 1</IonLabel>
           </IonItem>
           <IonItem routerDirection="forward" routerLink={`${url}/saloons/2`}>
-            <IonLabel>Saloon 2</IonLabel>
+            <IonLabel className="text-center">Saloon 2</IonLabel>
           </IonItem>
           <IonItem routerDirection="forward" routerLink={`${url}/saloons/3`}>
-            <IonLabel>Saloon 3</IonLabel>
+            <IonLabel className="text-center">Saloon 3</IonLabel>
           </IonItem>
           <IonItem routerDirection="forward" routerLink={`${url}/saloons/4`}>
-            <IonLabel>Saloon 4</IonLabel>
+            <IonLabel className="text-center">Saloon 4</IonLabel>
           </IonItem>
         </IonList>
       </IonContent>

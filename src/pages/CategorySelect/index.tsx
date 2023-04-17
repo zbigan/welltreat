@@ -1,9 +1,12 @@
 import React from "react"
+import api from "../../api/api"
 import { IonContent, IonHeader, IonItem, IonLabel, IonList, IonPage, IonTitle, IonToolbar } from "@ionic/react"
 import { RouteComponentProps } from "react-router-dom"
-
+import { useQuery } from "../../hooks/useQuery"
 
 const CategorySelect: React.FC<RouteComponentProps> = ({match: {url}}) => {
+  const [categories=[]] = useQuery(api.getCategoriesList)
+
   return (
     <IonPage>
       <IonHeader>
@@ -13,18 +16,13 @@ const CategorySelect: React.FC<RouteComponentProps> = ({match: {url}}) => {
       </IonHeader>
       <IonContent>
         <IonList className="grid grid-cols-2 gap-4 p-2">
-          <IonItem routerDirection="forward" routerLink={`${url}/categories/1`}>
-            <IonLabel className="text-center">Category 1</IonLabel>
-          </IonItem>
-          <IonItem routerDirection="forward" routerLink={`${url}/categories/2`}>
-            <IonLabel className="text-center">Category 2</IonLabel>
-          </IonItem>
-          <IonItem routerDirection="forward" routerLink={`${url}/categories/3`}>
-            <IonLabel className="text-center">Category 3</IonLabel>
-          </IonItem>
-          <IonItem routerDirection="forward" routerLink={`${url}/categories/4`}>
-            <IonLabel className="text-center">Category 4</IonLabel>
-          </IonItem>
+          {
+            categories.map(c => (
+              <IonItem routerDirection="forward" routerLink={`${url}/categories/${c}`}>
+                <IonLabel className="text-center">{c}</IonLabel>
+              </IonItem>
+            ))
+          }
         </IonList>
       </IonContent>
     </IonPage>

@@ -32,10 +32,10 @@ _At this sprint focus is on frontend/UX part. Data from BE will be hardcoded._
   - [x] CI and CD pipeline (with hosting setup)               (estimated: 1d, actual: 1d) :clap:
   - [ ] NodeJs backend (with SQL db and contracts)                          (2d)
   - [ ] API layer according to BE contracts
-  - [x] Ionic setup                                         
+  - [x] Ionic setup                                                       (1d)         
 
 ### **App navigation infrastructure:**
-  - [ ] Navigation bar for appointment registraiton steps     (1d)
+  - [x] Navigation bar for appointment registraiton steps     (1d)
   - [ ] Top bar with current step info, logo and menu button  (0.5d)
   - [ ] Menu dropdown (hamburger)                             (0.5d)
 

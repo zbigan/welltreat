@@ -10,8 +10,8 @@ const ServiceFinder: React.FC<RouteComponentProps> = ({match: {url}}) => {
     <IonPage>
       <IonRouterOutlet>
         <Route exact path={url} component={CategorySelect} />
-        <Route exact path={`${url}/categories/:categoryId`} component={CategoryDetails} />
-        <Route exact path={`${url}/categories/:categoryId/saloons/:saloonId`} component={SaloonDetails} />
+        <Route exact path={`${url}/categories/:category`} component={CategoryDetails} />
+        <Route exact path={`${url}/categories/:category/saloons/:saloonId`} component={SaloonDetails} />
       </IonRouterOutlet>
     </IonPage>
   )

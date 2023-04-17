@@ -3,6 +3,7 @@ import api from "../../api/api"
 import { IonContent, IonHeader, IonItem, IonLabel, IonList, IonPage, IonTitle, IonToolbar } from "@ionic/react"
 import { RouteComponentProps } from "react-router-dom"
 import { useQuery } from "../../hooks/useQuery"
+import { capitalizeFirstLetter } from "../../utils"
 
 const CategorySelect: React.FC<RouteComponentProps> = ({match: {url}}) => {
   const [categories=[]] = useQuery(api.getCategoriesList)
@@ -19,7 +20,7 @@ const CategorySelect: React.FC<RouteComponentProps> = ({match: {url}}) => {
           {
             categories.map(c => (
               <IonItem routerDirection="forward" routerLink={`${url}/categories/${c}`}>
-                <IonLabel className="text-center">{c}</IonLabel>
+                <IonLabel className="text-center">{capitalizeFirstLetter(c)}</IonLabel>
               </IonItem>
             ))
           }

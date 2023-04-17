@@ -13,8 +13,12 @@ class API implements Api {
     // return this.getList<Category>(`${this.#baseUrl}/categories`)
   }
 
-  public getSaloonsList(categoryId: string) {
-    return Promise.resolve(saloons)
+  public getSaloon(saloonId: string) {
+    return Promise.resolve(saloons.find(s => s.id === saloonId))
+  }
+
+  public getSaloonsList(category: Category) {
+    return Promise.resolve(saloons.filter(s => s.categories.includes(category)))
   }
 
   public getServicesList(saloonId: string) {
@@ -23,6 +27,10 @@ class API implements Api {
 
   protected async getList<T>(url: string): Promise<T[]> {
     return await fetch(url).then(res => res.json() as unknown as T[])
+  }
+
+  protected async get<T>(url: string): Promise<T> {
+    return await fetch(url).then(res => res.json() as unknown as T)
   }
 }
 

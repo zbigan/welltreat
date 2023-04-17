@@ -22,6 +22,7 @@ export interface Saloon {
 
 export interface Api {
   getCategoriesList(): Promise<Category[]>;
-  getSaloonsList(categoryId: string): Promise<Saloon[]>;
+  getSaloonsList(category: Category): Promise<Saloon[]>;
+  getSaloon(saloonId: string): Promise<Saloon | undefined>;
   getServicesList(saloonId: string): Promise<Service[]>;
 }

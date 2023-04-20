@@ -1,6 +1,14 @@
 import { Category, Saloon, Service } from "./types";
 
+
 const categories: Category[] = ['barbershop', 'beauty', 'hair', 'massage']
+
+const categoriesWithColors: Record<Category, string> = {
+  'barbershop': '#F0F8FF',
+  'beauty': '#FAEBD7',
+  'hair': '#BDB76B',
+  'massage': '#E6E6FA'
+}
 
 const services: Service[] = [
   {
@@ -78,6 +86,7 @@ const saloons: Saloon[] = [
 
 export {
   categories,
+  categoriesWithColors,
   saloons,
   services
 }

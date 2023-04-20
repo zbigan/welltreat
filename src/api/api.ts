@@ -1,4 +1,4 @@
-import { categories, saloons, services } from "./stubData";
+import { categories, categoriesWithColors, saloons, services } from "./stubData";
 import { Api, Category } from "./types";
 
 class API implements Api {
@@ -10,7 +10,11 @@ class API implements Api {
   public getCategoriesList() {
     return Promise.resolve(categories)
     // replace with this line when backend is ready:
-    // return this.getList<Category>(`${this.#baseUrl}/categories`)
+    return this.getList<Category>(`${this.#baseUrl}/categories`)
+  }
+
+  public getCategoryColorsList() {
+    return Promise.resolve(categoriesWithColors)
   }
 
   public getSaloon(saloonId: string) {
@@ -22,7 +26,7 @@ class API implements Api {
   }
 
   public getServicesList(saloonId: string) {
-    return Promise.resolve(services)
+    return Promise.resolve(services.filter(s => s.saloonId === saloonId))
   }
 
   protected async getList<T>(url: string): Promise<T[]> {

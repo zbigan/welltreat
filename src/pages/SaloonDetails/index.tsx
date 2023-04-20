@@ -1,5 +1,5 @@
 import React, { useCallback } from "react"
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react"
+import { IonBackButton, IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react"
 import { RouteComponentProps } from "react-router-dom"
 import { useQuery } from "../../hooks/useQuery";
 import api from "../../api/api";
@@ -12,6 +12,9 @@ const SaloonDetails: React.FC<RouteComponentProps<{category: string; saloonId: s
     <IonPage>
       <IonHeader>
         <IonToolbar>
+          <IonButtons slot="start">
+            <IonBackButton></IonBackButton>
+          </IonButtons>
           <IonTitle className="text-center">{saloonDetails?.name}</IonTitle>
         </IonToolbar>
       </IonHeader>
